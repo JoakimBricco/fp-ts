@@ -1,5 +1,6 @@
 import express, { Express, Request, Response , Application } from 'express';
 import dotenv from 'dotenv';
+import { functionalFunctions } from './src'
 
 //For env File 
 dotenv.config();
@@ -8,8 +9,7 @@ const app: Application = express();
 const port = process.env.PORT || 8000;
 
 app.get('/', (req: Request, res: Response) => {
-    const hej = 5;
-    console.log("hej: ", hej);
+    functionalFunctions();
     res.send('Welcome to Express & TypeScript Server');
 });
 
